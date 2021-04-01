@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Julian's Personal Portfolio</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <!--MaxCDN Bootstrap-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <!--Font Awesome-->
+        <script src="https://kit.fontawesome.com/9a6af3c260.js" crossorigin="anonymous"></script>
+    </head>
+    <body style="overflow-x: hidden; background-color: #E9ECEF;">
+        <div id="bar"></div>
+
+        <!-- Landing Page with text -->
+        <div class="landing">
+            <div class="home-wrap">
+                <img src="img/bg.jpg" width="100%" max-width="100%"> <!--Image from Unsplash-->
+            </div>
+        </div>
+        <div class="caption text-left">
+            <h1>Julian Mendoza,</h1>
+            <h3>an aspiring programmer</h3>
+        </div>
+
+        <div id="bar"></div>
+
+        <!--Three accordion sections-->
+        <div>
+            <button class="accordion">Personal Details</button>
+            <div class="panel" style="background-color: #1B1B1B;">
+                <h4 class="center" style="width: 70%; color: white;" align="justify">I am <span style="color: skyblue">Julian Maria Mendoza</span>. I am an aspiring programmer. I am 19 years old. I live in Marikina City. I am currently taking up Computer Science at the <span style="color: yellow;">University of Santo Tomas</span>. I enjoy programming and I try to learn as much as I can.</h4>
+            </div>
+
+            <div id="bar"></div>
+
+            <button class="accordion">Expertise</button>
+            <!--Bootstrap Jumbotron-->
+            <div class="panel jumbotron">
+                <div class="narrow">
+                    <div class="row text-center">
+                        <div class="col-md-6">
+                            <div class="feature">
+                                <i class="fas fa-code fa-4x" data-fa-transform="shrink-3 up-5"></i>
+                                <h4>Java Programming</h4>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="feature">
+                                <i class="fab fa-html5 fa-4x" data-fa-transform="shrink-3 up-5"></i>
+                                <h4>Web Development</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="accordion">Hobbies</button>
+            <!--Boostrap Jumbotron-->
+            <div class="panel jumbotron">
+                <div class="narrow">
+                    <div class="row text-center">
+                        <div class="col-md-4">
+                            <div class="feature">
+                                <i class="fas fa-gamepad fa-4x" data-fa-transform="shrink-3 up-5"></i>
+                                <h4>Gaming</h4>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="feature">
+                                <i class="fab fa-youtube fa-4x" data-fa-transform="shrink-3 up-5"></i>
+                                <h4>Watching YouTube</h4>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="feature">
+                                <i class="fas fa-tv fa-4x" data-fa-transform="shrink-5 up-5"></i>
+                                <h4>Watching Series</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="bar"></div>
+
+        <!--Past Projects Section-->
+        <div class="past"><strong>Past Project(s)</strong>
+            <img src="img/s1.png" class="center" style="width: 70%;">
+            <p style="text-align: center; font-size: 1.3rem; padding: 
+               5px 5px; color: white;">A website for CS2612</p>
+
+            <img src="img/s2.png" class="center" style="width: 70%">
+            <img src="img/s21.png" class="center" style="width: 70%">
+            <p style="text-align: center; font-size: 1.3rem; padding: 
+               5px 5px; color: white;">Machine Problem 1 for ICS2608</p>
+
+            <img src="img/s3.png" class="center" style="width: 70%">
+            <p style="text-align: center; font-size: 1.3rem; padding: 
+               5px 5px; color: white;">Machine Problem 2 for ICS2608</p>
+        </div>
+
+        <div id="bar"></div>
+
+        <!--Script for accordion-->
+        <script>
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+
+            for (i = 0; i < acc.length; i++) {
+                acc[i].addEventListener("click", function () {
+                    this.classList.toggle("active");
+                    var panel = this.nextElementSibling;
+                    if (panel.style.display === "block") {
+                        panel.style.display = "none";
+                    } else {
+                        panel.style.display = "block";
+                    }
+                });
+            }
+        </script>
+    </body>
+</html>
